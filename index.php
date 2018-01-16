@@ -1,3 +1,6 @@
+<?php
+  $con = mysqli_connect("localhost", "root", "110110@", "phpproject");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,25 +27,24 @@
 <body id="page-top">
   <!-- Header -->
   <header class="masthead d-flex">
+    <?php
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+
+      $qSelect = "SELECT * FROM user WHERE username=". "'". $username. "'". " AND password=$password";
+
+      $result = mysqli_query($con, $qSelect);
+    ?>
     <div class="container text-center my-auto">
-      <h1 class="mb-1">Ali Ramezani</h1>
-      <h3 class="mb-5">
-        <em>PHP Lesson Project</em>
-      </h3>
-      <form>
-        <div class="login-container">
-          <h2>SIGN IN TO YOUR ACCOUNT</h2>
-          <div class="input-container">
-            <input type="text" placeholder="username" class="email text-input">
-            <!-- <div class="input-icon envelope-icon-acount"><span class="fontawesome-envelope scnd-font-color"></span></div> -->
-          </div>
-          <div class="input-container">
-            <input type="password" placeholder="Password" class="password text-input">
-            <!-- <div class="input-icon password-icon"><span class="fontawesome-lock scnd-font-color">aa</span></div> -->
-          </div>
-          <a class="btn btn-primary btn-xl js-scroll-trigger signin-btn" href="#">SIGN IN</a>
-        </div>
-      </form>
+      <?php
+        if(!$result || mysqli_num_rows($result) <= 0) {
+          echo "result: ". $result;
+          echo "errooooor";
+        }
+        else {
+          echo "true";
+        }
+      ?>
     </div>
   </header>
 
