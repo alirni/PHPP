@@ -19,7 +19,7 @@
 
   if(!isset($_COOKIE['userLogin'])) {
     // header('Location: login.php');
-    setcookie('userLogin', $username, time() + 3600);
+    setcookie('userLogin', $username, time()+6800);
   }
   else {
     // setcookie('userLogin', $username, time() + 3600);
@@ -36,7 +36,7 @@
   <title>Ali Ramezani</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
   <!-- Custom Fonts -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -47,26 +47,27 @@
   <link href="css/main.css" rel="stylesheet" />
 </head>
 
-<body id="page-top background">
+<body id="page-top" class="background">
   <!-- Nav -->
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">WebSiteName</a>
+        <a class="navbar-brand" href="#">Ali Ramezani</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
+        <li class="active"><a href="index.php">Home</a></li>
+        <li><a href="search.php">Search</a></li>
+        <li><a href="contact.php">Contact Me</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
       </ul>
     </div>
   </nav>
 
-
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
