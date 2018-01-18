@@ -30,7 +30,7 @@
   <title>Ali Ramezani</title>
 
   <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" />
 
   <!-- Custom Fonts -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -63,7 +63,7 @@
         <li><a href="contact.php">Contact Me</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="text-primary show-date">
+        <li class="show-date">
           <?php
             include_once 'vendor/jdf.php';
             $date = jdate("l، j F Y، H:i:s A");
@@ -74,6 +74,24 @@
       </ul>
     </div>
   </nav>
+
+  <div class="container-fluid">
+    <div class="main col-md-8">
+      <div class="content">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae nemo autem at dicta? Cumque nihil libero exercitationem nam, tempora, voluptates aut facere quia expedita fugiat corporis optio, eligendi non ratione.
+      </div>
+    </div>
+    <div class="slidebar col-md-4">
+      <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi omnis illum maiores autem placeat est veritatis expedita recusandae minus! Dignissimos eaque vitae, mollitia similique eos adipisci maiores quo non nemo.
+      </div>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <footer class="footer-copyright">
+    <a href="https://github.com/alirni"> Ali Ramezani </a> © 2018 all rights reserved
+  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
