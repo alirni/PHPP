@@ -1,28 +1,22 @@
 <?php
-  // if(!isset($_COOKIE['userLogin'])) {
-  //   header('Location: login.php');
-  //   // setcookie('userLogin', $username, time() + 3600);
-  // }
+  if ($_POST) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-  $con = mysqli_connect("localhost", "root", "110110@", "phpproject");
+    $con = mysqli_connect("localhost", "root", "110110@", "phpproject");
+    $qSelect = "SELECT * FROM user WHERE username=". "'". $username. "'". " AND password=$password";
+    $result = mysqli_query($con, $qSelect);
 
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-
-  $qSelect = "SELECT * FROM user WHERE username=". "'". $username. "'". " AND password=$password";
-
-  $result = mysqli_query($con, $qSelect);
-
-  if(!$result || mysqli_num_rows($result) <= 0) {
-    header('Location: login.php');
+    if(!$result || mysqli_num_rows($result) <= 0) {
+      header('Location: login.php');
+    }
+    else {
+      setcookie('userLogin', $username, time()+ 3600);
+    }
   }
 
   if(!isset($_COOKIE['userLogin'])) {
-    // header('Location: login.php');
-    setcookie('userLogin', $username, time()+6800);
-  }
-  else {
-    // setcookie('userLogin', $username, time() + 3600);
+    header('Location: login.php');
   }
 ?>
 <!DOCTYPE html>
@@ -52,14 +46,30 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Ali Ramezani</a>
+        <a class="navbar-brand" href="#">
+          <?php
+            if ($_POST) {
+              echo $username;
+            }
+            else {
+              echo $_COOKIE['userLogin'];
+            }
+          ?>
+        </a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="search.php">Search</a></li>
         <li><a href="contact.php">Contact Me</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li class="text-primary show-date">
+          <?php
+            include_once 'vendor/jdf.php';
+            $date = jdate("l، j F Y، H:i:s A");
+            echo $date;
+          ?>
+        </li>
         <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
       </ul>
     </div>
