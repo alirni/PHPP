@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" />
 
   <!-- Custom Fonts -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-  <!-- <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet"> -->
+  <link href="vendor/font/droid-naskh.css" rel="stylesheet" type="text/css" />
 
   <!-- Custom CSS -->
   <link href="css/main.css" rel="stylesheet" />
@@ -56,7 +56,7 @@
 
   <!--Footer-->
   <footer class="footer-copyright">
-    <a href="https://github.com/alirni"> Ali Ramezani </a> © 2018 all rights reserved
+    <a href="https://github.com/alirni"> Ali Ramezani </a> © <?php echo date("Y"); ?> all rights reserved
   </footer>
 
   <!-- Bootstrap core JavaScript -->
