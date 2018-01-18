@@ -175,18 +175,11 @@ a:hover, a:focus, a:active {
   color: #fafafa;
 }
 
-.main {
-  /* background-color: #1f253d; */
-  /* margin-right: 2em; */
-}
-
-.slidebar {
-  /* background-color: #94ab11; */
-}
-
 .content {
-  min-height: 50em;
+  min-height: 45em;
+  max-height: 45em;
   padding: 2em;
   background-color: #fafafac9;
   border-radius: 10px;
+  overflow-y: auto;
 }
