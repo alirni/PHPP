@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: 'Source Sans Pro';
+  font-family: 'Droid Arabic Naskh', 'Noto Naskh Arabic', 'Source Sans Pro', 'Roboto', 'Noto', sans-serif;
 }
 
 .btn-xl {
@@ -151,11 +151,42 @@ a:hover, a:focus, a:active {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  /* width: 100%; */
-  /* height: 100vh; */
 }
 
 .show-date {
-  font-size: 17px;
-  line-height: 2.9;
+  font-size: 15px;
+  line-height: 3.3;
+  color: #9d9d9d;
+}
+
+.footer-copyright {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #222222;
+  color: #fafafa;
+  height: 4em;
+  text-align: center;
+  line-height: 4;
+}
+
+.footer-copyright a {
+  color: #fafafa;
+}
+
+.main {
+  /* background-color: #1f253d; */
+  /* margin-right: 2em; */
+}
+
+.slidebar {
+  /* background-color: #94ab11; */
+}
+
+.content {
+  min-height: 50em;
+  padding: 2em;
+  background-color: #fafafac9;
+  border-radius: 10px;
 }
