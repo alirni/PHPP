@@ -25,14 +25,30 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Ali Ramezani</a>
+        <a class="navbar-brand" href="#">
+          <?php
+            if ($_POST) {
+              echo $username;
+            }
+            else {
+              echo $_COOKIE['userLogin'];
+            }
+          ?>
+        </a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="search.php">Search</a></li>
         <li><a href="contact.php">Contact Me</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li class="text-primary show-date">
+          <?php
+            include_once 'vendor/jdf.php';
+            $date = jdate("l، j F Y، H:i:s A");
+            echo $date;
+          ?>
+        </li>
         <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
       </ul>
     </div>
