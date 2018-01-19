@@ -159,6 +159,25 @@ a:hover, a:focus, a:active {
   color: #9d9d9d;
 }
 
+.show-ip {
+  font-size: 15px;
+  line-height: 3.3;
+  color: #9d9d9d;
+  margin-right: 20px;
+}
+
+.center-content {
+  width: 200px;
+  font-size: 30px;
+  margin: 15px auto;
+}
+
+.center-message {
+  width: 328px;
+  font-size: 15px;
+  margin: 15px auto;
+}
+
 .footer-copyright {
   position: fixed;
   bottom: 0;
@@ -169,6 +188,8 @@ a:hover, a:focus, a:active {
   height: 4em;
   text-align: center;
   line-height: 4;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .footer-copyright a {
@@ -176,9 +197,9 @@ a:hover, a:focus, a:active {
 }
 
 .content {
-  min-height: 45em;
-  max-height: 45em;
-  padding: 2em;
+  min-height: 600px;
+  max-height: 600px;
+  padding: 30px;
   background-color: #fafafac9;
   border-radius: 10px;
   overflow-y: auto;
@@ -223,4 +244,9 @@ a:hover, a:focus, a:active {
 
 .search-btn {
   margin-top: 1em;
+}
+
+.contact {
+  font-size: 25px;
+  text-align: center;
 }
