@@ -183,3 +183,44 @@ a:hover, a:focus, a:active {
   border-radius: 10px;
   overflow-y: auto;
 }
+
+.search-text {
+  width: 38.8em;
+  height: 20em;
+  padding: 1em;
+  resize: none;
+  background: #5c668a8c;
+  color: #fff;
+  border: solid 1px #1f253d;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.content input {
+  width: 250px;
+  height: 50px;
+  padding: 0.5em;
+  background: #5c668a8c;
+  color: #fff;
+  border: solid 1px #1f253d;
+  border-radius: 5px;
+}
+
+.content input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.content textarea:focus,
+.content input:focus {
+  outline: none;
+  border: 1px solid #94ab11;
+}
+
+.search-box {
+  padding: 0;
+  margin: 0;
+}
+
+.search-btn {
+  margin-top: 1em;
+}
