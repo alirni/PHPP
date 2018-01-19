@@ -99,6 +99,18 @@
     </div>
     <div class="slidebar col-md-4">
       <div class="content">
+        <form action="search.php" method="post">
+          <textarea class="search-text" name="search" id=""></textarea>
+          <div class="col-md-6 search-box">
+            <input type="text" placeholder="search key" class="text-input" name="searchkey">
+          </div>
+          <div class="col-md-6 search-box">
+            <input type="color" name="color">
+          </div>
+          <div class="">
+            <input class="btn-primary search-btn" type="submit" value="Search"/>
+          </div>
+        </form>
       </div>
     </div>
   </div>
