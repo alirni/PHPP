@@ -27,7 +27,7 @@
     <div class="container text-center my-auto">
       <h1 class="mb-1">Ali Ramezani</h1>
       <h3 class="mb-5">
-        <em>PHP Lesson Project</em>
+        <em><a href="https://github.com/alirni/PHPP">PHP Lesson Project</a></em>
       </h3>
       <form action="index.php" method="post">
         <div class="login-container">
