@@ -63,6 +63,11 @@
         <li><a href="contact.php">Contact Me</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li class="show-ip">
+          <?php
+            echo $_SERVER['SERVER_ADDR'];
+          ?>
+        </li>
         <li class="show-date">
           <?php
             include_once 'vendor/jdf.php';
@@ -117,7 +122,7 @@
 
   <!--Footer-->
   <footer class="footer-copyright">
-    <a href="https://github.com/alirni"> Ali Ramezani </a> © <?php echo date("Y"); ?> all rights reserved
+    <a href="https://github.com/alirni"> Ali Ramezani </a> © <?php echo date("Y"); ?> all rights reserved :)
   </footer>
 
   <!-- Bootstrap core JavaScript -->
