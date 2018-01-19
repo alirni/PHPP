@@ -27,12 +27,7 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
           <?php
-            if ($_POST) {
-              echo $username;
-            }
-            else {
-              echo $_COOKIE['userLogin'];
-            }
+            echo $_COOKIE['userLogin'];
           ?>
         </a>
       </div>
@@ -53,6 +48,23 @@
       </ul>
     </div>
   </nav>
+
+  <div class="container-fluid">
+    <div class="main col-md-12">
+      <div class="content">
+        <?php
+          if ($_POST) {
+            $search = $_POST['search'];
+            $searchkey = $_POST['searchkey'];
+            $color = $_POST['color'];
+
+            $replaceValue = '<span style="background-color:'.$color.';">'.$searchkey.'</span>';
+            echo str_replace($searchkey, $replaceValue, $search);
+          }
+        ?>
+      </div>
+    </div>
+  </div>
 
   <!--Footer-->
   <footer class="footer-copyright">
