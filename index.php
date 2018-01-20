@@ -40,7 +40,7 @@
   <!-- Custom CSS -->
   <link href="css/main.css" rel="stylesheet" />
 
-  <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.0.slim.min.js"></script>
 </head>
 
 <body id="page-top" class="background">
